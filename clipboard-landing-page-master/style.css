@@ -1,0 +1,114 @@
+/*Import para a font*/
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*Resetando configurações padrão dos navegadores*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*variáveis das cores usadas nesse projeto, elas facilitam a usabilidade e manutenção*/
+:root {
+    --green500: hsl(171, 66%, 44%);
+    --blue100: hsl(233, 100%, 69%);
+    --gray700: hsl(210, 10%, 33%);
+    --gray500: hsl(201, 11%, 66%);
+}
+
+/*Body (corpo) do site*/
+body {
+    background-image: url(./assets/background/bg-header-mobile.png);
+    background-position: top;
+
+    background-color: white;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    min-width: 100vw;
+    min-height: 100vh;
+    font-size: 16px;
+
+    padding: 1.5rem; /*padding baseado na raiz, ideal para responsividade e escalabilidade, caso o usuário use uma configuração diferente do esperado.*/
+}
+
+main {
+    max-width: 1100px;
+    width: 100%; 
+
+    margin-top: 5rem;   
+}
+/*estilização folha 01*/
+.pag-historia {
+    /*Alinhamento geral da seção*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*alinhamento geral na seção, referente aos textos*/
+    text-align: center;
+
+    /*espaçamento*/
+    gap: 1.5rem;
+}
+
+
+.logo-empresa {
+    width: 6.5rem;
+    margin-bottom: 1rem;
+}
+
+.titulo-principal{
+    color: var(--gray700);
+    font-family: "Bai Jamjuree", sans-serif;
+
+    font-weight: 600;
+    font-style: normal;
+  
+}
+
+.descricao-principal{
+    font-family: "Bai Jamjuree", sans-serif;
+    text-align: center;
+    line-height: 1.5rem;
+
+    font-weight: 400;
+    color: var(--gray500);
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+
+.botao-Download{
+    width: 18rem;
+    height: 3rem;
+    
+    border: none;
+    border-radius: 25px;
+    
+    color: #fff;
+    
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    
+}
+
+#btn-green{
+    background-color: var(--green500);
+    box-shadow: 0 1px 8px var(--green500);
+}
+
+#btn-blue{
+    background-color: var(--blue100);
+    box-shadow: 0 1px 8px var(--blue100);
+}
+
+/*estilização folha 02*/
+
