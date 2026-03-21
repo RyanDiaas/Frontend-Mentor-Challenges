@@ -14,6 +14,7 @@
     --blue100: hsl(233, 100%, 69%);
     --gray700: hsl(210, 10%, 33%);
     --gray500: hsl(201, 11%, 66%);
+    --font: "Bai Jamjuree", sans-serif;
 }
 
 /*Body (corpo) do site*/
@@ -26,30 +27,30 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     
-    min-width: 100vw;
     min-height: 100vh;
-    font-size: 17px;
+    font-family: var(--font);
+}
 
-    padding: 1.5rem; /*padding baseado na raiz, ideal para responsividade e escalabilidade, caso o usuário use uma configuração diferente do esperado.*/
-
+.container {
+    max-width:1100px;
+    margin:auto;
     
+    margin-top: 5rem;   
+    padding: 1rem; /*padding baseado na raiz, ideal para responsividade e escalabilidade, caso o usuário use uma configuração diferente do esperado.*/
 }
 
-main {
-    width: 100%; 
-    margin-top: 5rem;   
+section {
+    margin-top: 7rem;
 }
+
 /*estilização folha 01*/
 .pag-historia {
-    /*Alinhamento geral da seção*/
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    /*alinhamento geral na seção, referente aos textos*/
     text-align: center;
 
-    /*espaçamento*/
     gap: 1.5rem;
 }
 
@@ -61,18 +62,16 @@ main {
 
 .titulo-principal{
     color: var(--gray700);
-    font-family: "Bai Jamjuree", sans-serif;
-
+    font-size: 2rem;
     font-weight: 600;
-    font-style: normal;
   
 }
 
 .descricao-principal{
-    font-family: "Bai Jamjuree", sans-serif;
     text-align: center;
     line-height: 1.5rem;
 
+    font-size: 1rem;
     font-weight: 400;
     color: var(--gray500);
 }
@@ -86,20 +85,23 @@ main {
 }
 
 .botao-Download{
-    width: 18rem;
-    height: 3rem;
-    
+    padding: 0.9rem 2rem;
+    width: 100%;
+    max-width: 18rem;
+
+    font-family: var(--font);
     border: none;
-    border-radius: 25px;
+    border-radius: 20px;
     
     color: #fff;
     
 
-    font-family: "Bai Jamjuree", sans-serif;
     font-weight: 600;
     font-size: 18px;
-    
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
 
 #btn-green{
     background-color: var(--green500);
@@ -111,97 +113,181 @@ main {
     box-shadow: 0 1px 8px var(--blue100);
 }
 
-/*estilização folha 02*/
 
+.botao-Download:active{
+    transform: translateY(2px);
+}
+
+/*estilização folha 02*/
 .pag-trechos{
-    font-family: "Bai Jamjuree", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     
-    margin-top: 7rem;
     text-align: center;
     gap: 2rem;
 }
 
-.pag-trechos h1, h2 {
+.pag-trechos h1{
+    font-size: 1.8rem;
+    color: var(--gray700);
+    font-weight: 600;
+}
+
+
+h2 {
+    font-size: 1.8rem;
     color: var(--gray700);
     font-weight: 600;
 }
 
 .pag-trechos p {
     color: var(--gray500);
+    font-size: 1.09rem;
 }
 
 .pag-trechos img {
-    height: 80%;
-    width: 80%;
+    max-width: 100%;
+    height: auto;
 }
 
 /*estilização folha 03*/
-
 .pag-acesso {
-    font-family: "Bai Jamjuree", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
-    margin-top: 7rem;
+
     gap: 2rem;
 }
 
 .pag-acesso h1 {
     color: var(--gray700);
     font-weight: 600;
+
+    font-size: 1rem;
 }
 
 .pag-acesso p {
+    font-size: 1.1rem;
     color: var(--gray500);
 }
 
 .pag-acesso img {
-    width: 90%;
+    max-width: 100%;
+    height: auto;
 }
 
 /*estilização folha 04*/
-
 .pag-fluxo {
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
     gap: 2rem;
-    font-family: "Bai Jamjuree", sans-serif;
 }
 
 .pag-fluxo h1 {
     color: var(--gray700);
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .pag-fluxo p {
     color: var(--gray500);
+    font-size: 1.1rem;
 }
+
+
 /*estilização pag 4*/
 .pag-beneficios{
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: var(--font);
     
     gap: 2rem;
 }
 
 .pag-beneficios h2 {
     color: var(--gray700);
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
+
 .pag-beneficios p {
- color: var(--gray500);   
+    font-size: 1.1rem;
+    color: var(--gray500);   
+}
+
+
+/*Estilização página de logos*/
+.pag-empresas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    gap: 4rem;
+}
+
+.pag-empresas img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Estilização página de prancheta*/
+.pag-prancheta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    gap: 2rem;
+}
+
+.pag-prancheta h1 {
+    color: var(--gray700);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.pag-prancheta p {
+    color: var(--gray500);
+    font-size: 1.12rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 1.5rem;
+    margin-top: 7rem;
+    background-color: rgb(243, 243, 243);
+}
+
+.logo-footer {
+    width: 15%;
+}
+
+footer nav a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.8rem;
+
+    color: var(--gray700);
+    font-size: 1rem;
+}
+
+.redes-sociais {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 3rem;
 }
