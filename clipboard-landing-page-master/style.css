@@ -31,16 +31,40 @@ body {
     font-family: var(--font);
 }
 
+/*.container = main*/
 .container {
     max-width:1100px;
-    margin:auto;
-    
-    margin-top: 5rem;   
+    margin: auto;
+          
     padding: 1rem; /*padding baseado na raiz, ideal para responsividade e escalabilidade, caso o usuário use uma configuração diferente do esperado.*/
 }
 
+/*margens todas as classes com 7rem*/
 section {
     margin-top: 7rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+section h1, h2 {
+    color: var(--gray700);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+section p {
+    line-height: 1.5rem;
+    font-size: clamp(0.9rem, 4vw, 1rem);
+    font-weight: 400;
+    color: var(--gray500);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
 }
 
 /*estilização folha 01*/
@@ -48,43 +72,22 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    text-align: center;
-
-    gap: 1.5rem;
 }
-
 
 .logo-empresa {
     width: 6.5rem;
     margin-bottom: 1rem;
 }
 
-.titulo-principal{
-    color: var(--gray700);
-    font-size: 2rem;
-    font-weight: 600;
-  
-}
-
-.descricao-principal{
-    text-align: center;
-    line-height: 1.5rem;
-
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--gray500);
-}
-
 .botoes {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.5rem; /*espaçamentos entre os dois botões*/
 
-    margin-top: 1.5rem;
+    margin-top: 1.5rem; /*margem do botão de iOS para o texto acima dele*/
 }
 
-.botao-Download{
+.botao-Download {
     padding: 0.9rem 2rem;
     width: 100%;
     max-width: 18rem;
@@ -95,13 +98,22 @@ section {
     
     color: #fff;
     
-
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+footer nav a:hover {
+    color: var(--green500);
+    transition: color 0.3s ease;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
 
 #btn-green{
     background-color: var(--green500);
@@ -113,42 +125,29 @@ section {
     box-shadow: 0 1px 8px var(--blue100);
 }
 
+#btn-green2{
+    background-color: var(--green500);
+    box-shadow: 0 1px 8px var(--green500);
+}
+
+#btn-blue2{
+    background-color: var(--blue100);
+    box-shadow: 0 1px 8px var(--blue100);
+}
 
 .botao-Download:active{
     transform: translateY(2px);
 }
 
 /*estilização folha 02*/
-.pag-trechos{
+.pag-trechos {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    text-align: center;
-    gap: 2rem;
+    align-items: center; 
 }
 
-.pag-trechos h1{
-    font-size: 1.8rem;
-    color: var(--gray700);
-    font-weight: 600;
-}
-
-
-h2 {
-    font-size: 1.8rem;
-    color: var(--gray700);
-    font-weight: 600;
-}
-
-.pag-trechos p {
-    color: var(--gray500);
-    font-size: 1.09rem;
-}
-
-.pag-trechos img {
-    max-width: 100%;
-    height: auto;
+.pag-trechos div h2, p {
+    margin-top: 1.5rem;
 }
 
 /*estilização folha 03*/
@@ -156,27 +155,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-
-
-    gap: 2rem;
-}
-
-.pag-acesso h1 {
-    color: var(--gray700);
-    font-weight: 600;
-
-    font-size: 1rem;
-}
-
-.pag-acesso p {
-    font-size: 1.1rem;
-    color: var(--gray500);
-}
-
-.pag-acesso img {
-    max-width: 100%;
-    height: auto;
 }
 
 /*estilização folha 04*/
@@ -184,53 +162,20 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-
-    gap: 2rem;
 }
-
-.pag-fluxo h1 {
-    color: var(--gray700);
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.pag-fluxo p {
-    color: var(--gray500);
-    font-size: 1.1rem;
-}
-
 
 /*estilização pag 4*/
-.pag-beneficios{
+.pag-beneficios {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    font-family: var(--font);
-    
-    gap: 2rem;
-}
-
-.pag-beneficios h2 {
-    color: var(--gray700);
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-
-.pag-beneficios p {
-    font-size: 1.1rem;
-    color: var(--gray500);   
 }
 
 .beneficio {
+    gap: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    gap: 2rem;
-    
 }
 
 /*Estilização página de logos*/
@@ -238,13 +183,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    gap: 4rem;
-}
-
-.pag-empresas img {
-    max-width: 100%;
-    height: auto;
 }
 
 /*Estilização página de prancheta*/
@@ -252,20 +190,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    
-    gap: 2rem;
-}
-
-.pag-prancheta h1 {
-    color: var(--gray700);
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.pag-prancheta p {
-    color: var(--gray500);
-    font-size: 1.12rem;
 }
 
 footer {
@@ -275,6 +199,7 @@ footer {
     padding: 3rem;
     gap: 1.5rem;
     margin-top: 7rem;
+    width: 100%;
     background-color: rgb(243, 243, 243);
 }
 
@@ -298,4 +223,74 @@ footer nav a {
     margin-bottom: 2rem;
     display: flex;
     gap: 3rem;
+}
+
+@media (min-width: 1075px) {
+    body {
+        background-image: url(./assets/background/bg-header-desktop.png);
+    }
+
+    .botoes {
+        flex-direction: row;
+    }
+    
+    .content-trechos {
+        display: flex;
+        align-items: flex-start;        
+        text-align: left;
+        gap: 30rem;
+        padding: 3rem;
+    }
+
+    .computador-trechos {
+        position: absolute;
+        left: -50px; /* Move para fora da tela pela esquerda */
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30rem;
+    }
+
+    .pag-acesso {
+        margin-top: 15rem;
+    }
+    
+    .pag-beneficios {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .pag-empresas {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+    .logo-footer {
+        width: 5%;
+    }
+
+    .navegacao {
+        width: 33.33%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .navegacao div a {
+        text-align: left;
+    }
+
 }
