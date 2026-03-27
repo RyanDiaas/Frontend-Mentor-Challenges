@@ -53,6 +53,7 @@ https://ryandiaas.github.io/Frontend-Mentor-Challenges/clipboard-landing-page-ma
 📦 clipboard-landing-page
  ┣ 📂 assets
  ┃ ┣ 📂 background
+ ┃ ┗ 📂 design
  ┃ ┣ 📂 icones
  ┃ ┣ 📂 logo-empresas
  ┃ ┗ 📂 produtos
